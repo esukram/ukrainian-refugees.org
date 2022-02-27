@@ -1,11 +1,13 @@
 import { useRouter } from "next/router";
-import { GetStaticProps, NextComponentType } from "next";
+import { GetStaticProps, NextPage } from "next";
 
 import Link from "next/link";
 
+import type LocaleProps from "../locales";
+
 import styles from "../styles/Header.module.css";
 
-const Header: NextComponentType = (props) => {
+const Header: NextPage<LocaleProps> = (props) => {
   const { locales = [], locale: activeLocale, ...router } = useRouter();
 
   return (
