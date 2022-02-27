@@ -1,9 +1,10 @@
 import { useRouter } from "next/router";
-import { GetStaticProps, NextComponentType, NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
+import type LocaleProps from "../locales";
 
 import styles from "../styles/Footer.module.css";
 
-const Footer: NextPage = (props) => {
+const Footer: NextPage<LocaleProps> = (props) => {
   const { locales = [], locale: activeLocale, ...router } = useRouter();
 
   return (

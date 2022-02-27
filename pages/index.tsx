@@ -3,12 +3,13 @@ import type { NextPage } from "next";
 import { GetStaticProps } from "next";
 
 import Head from "next/head";
+import type LocaleProps from "../locales";
 
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const Home: NextPage = (props) => {
+const Home: NextPage<LocaleProps> = (props) => {
   const { locales = [], locale: activeLocale, ...router } = useRouter();
 
   return (
