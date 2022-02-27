@@ -1,0 +1,14 @@
+{
+  "head": {
+    "title": "Hilfe für Ukrainische Flüchtlinge"
+  },
+  "Home": {
+    "title": "Herzlich Willkommen"
+  },
+  "footer": {
+    "bugs_start": "Bitte melde uns Fehler als ",
+    "bugs_end": "!",
+    "ideas_start": "Neue Ideen sind willkommen, bitte erstelle ein ",
+    "ideas_end": " Ticket dafür."
+  }
+}

@@ -1,0 +1,22 @@
+.footer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.footer ul {
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  margin: 1em;
+}
+
+.footer ul li {
+  list-style: none;
+  margin-left: 1rem;
+}
+
+.footer a {
+  text-decoration: underline;
+}

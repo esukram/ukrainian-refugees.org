@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  padding: 1rem;
+}
+
+.header h1 {
+  display: block;
+  width: 69vw;
+  margin: 0 auto 0 0;
+}
+
+.lang_switcher {
+  width: 30vw;
+  margin: 0 0 auto 0;
+  display: flex;
+  justify-content: right;
+}
+
+.lang_switcher li {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1rem;
+}
+
+.lang_switcher a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.lang_switcher a:hover,
+.lang_switcher a:focus,
+.lang_switcher a:active {
+  text-decoration: underline;
+}

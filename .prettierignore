@@ -1,0 +1,9 @@
+.github
+.vscode
+.next
+amplify
+build
+dist
+node_modules
+src/aws-exports.js
+src/graphql/generated
