@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ukrainianrefugeesorg-dev-72358-authRole",
+      "UnauthRoleArn": "arn:aws:iam::237374037120:role/amplify-ukrainianrefugeesorg-dev-72358-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::237374037120:role/amplify-ukrainianrefugeesorg-dev-72358-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-ukrainianrefugeesorg-dev-72358-deployment",
+      "UnauthRoleName": "amplify-ukrainianrefugeesorg-dev-72358-unauthRole",
+      "StackName": "amplify-ukrainianrefugeesorg-dev-72358",
+      "StackId": "arn:aws:cloudformation:eu-central-1:237374037120:stack/amplify-ukrainianrefugeesorg-dev-72358/052ea1e0-985f-11ec-82c5-02a89c140d8c",
+      "AmplifyAppId": "d34gwk59a5ij54"
+    }
+  }
+}
