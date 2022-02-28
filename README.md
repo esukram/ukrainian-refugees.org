@@ -4,6 +4,11 @@ This project and resulting progessive web application should enable
 the refugees to find quickly a place where they can get shelter and
 some rest.
 
+## Deployment
+
+Currently the placeholder application is hosted
+[https://ukrainian-refugees.org](https://ukrainian-refugees.org/).
+
 ## What is the purpose of that application?
 
 This application should primarily help refugees to find shelter in
