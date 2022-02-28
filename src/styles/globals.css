@@ -1,3 +1,22 @@
+@tailwind base;
+@layer base {
+  h1 {
+    @apply text-2xl mt-1;
+  }
+  h2 {
+    @apply text-xl mt-1.5;
+  }
+  h3 {
+    @apply text-lg mt-1;
+  }
+  a {
+    @apply text-blue-600 underline;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -7,18 +26,6 @@ body {
 }
 
 body {
-  overflow-y: scroll;
-  overflow-x: auto;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-* {
-  box-sizing: border-box;
+  @apply overflow-y-scroll overflow-x-auto;
+  @apply bg-white dark:bg-slate-900;
 }
