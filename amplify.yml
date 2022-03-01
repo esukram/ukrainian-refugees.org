@@ -12,12 +12,16 @@ frontend:
         - yarn install
     build:
       commands:
+<<<<<<< Updated upstream
         - yarn run build
+=======
+        - env
+        - yarn build
+>>>>>>> Stashed changes
   artifacts:
     baseDirectory: .next
     files:
-      - '**/*'
+      - "**/*"
   cache:
     paths:
       - node_modules/**/*
-
