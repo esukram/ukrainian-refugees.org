@@ -11,11 +11,9 @@ import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-let jsRumAgent: string;
-if (process.env.NODE_ENV === "production") {
+let jsRumAgent = "/js-rum-dev.js";
+if (process.env.APP_ENV === "production") {
   jsRumAgent = "/js-rum-prod.js";
-} else {
-  jsRumAgent = "/js-rum-dev.js";
 }
 
 const Home: NextPage<LocaleProps> = (props) => {
