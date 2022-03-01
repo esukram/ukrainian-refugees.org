@@ -12,7 +12,7 @@ frontend:
         - yarn install
     build:
       commands:
-        - yarn run build
+        - yarn build
   artifacts:
     baseDirectory: .next
     files:
@@ -20,3 +20,4 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
+      - ./.next/cache/**/*
