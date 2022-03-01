@@ -3,11 +3,20 @@ import type { NextPage } from "next";
 import { GetStaticProps } from "next";
 
 import Head from "next/head";
+import Script from "next/script";
+
 import type LocaleProps from "../locales";
 
 import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+
+let jsRumAgent: string;
+if (process.env.NODE_ENV === "production") {
+  jsRumAgent = "/js-rum-prod.js";
+} else {
+  jsRumAgent = "/js-rum-dev.js";
+}
 
 const Home: NextPage<LocaleProps> = (props) => {
   const { locales = [], locale: activeLocale, ...router } = useRouter();
@@ -66,6 +75,7 @@ const Home: NextPage<LocaleProps> = (props) => {
       </main>
 
       <Footer {...props}></Footer>
+      <Script src={jsRumAgent} strategy="beforeInteractive" />
     </>
   );
 };
