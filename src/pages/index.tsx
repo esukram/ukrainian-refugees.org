@@ -3,6 +3,8 @@ import type { NextPage } from "next";
 import { GetStaticProps } from "next";
 
 import Head from "next/head";
+import Script from "next/script";
+
 import type LocaleProps from "../locales";
 
 import styles from "../styles/Home.module.css";
@@ -24,7 +26,6 @@ const Home: NextPage<LocaleProps> = (props) => {
       <Head>
         <title>{props.locale.head.title}</title>
         <link rel="icon" href="/favicon.ico" />
-        <script src={jsRumAgent} defer={false} />
       </Head>
 
       <Header {...props}></Header>
@@ -74,6 +75,7 @@ const Home: NextPage<LocaleProps> = (props) => {
       </main>
 
       <Footer {...props}></Footer>
+      <Script src={jsRumAgent} strategy="beforeInteractive" />
     </>
   );
 };
