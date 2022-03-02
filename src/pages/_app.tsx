@@ -30,14 +30,10 @@ function MyApp({ Component, pageProps, router }: AppProps) {
       </Head>
 
       <Layout>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </Layout>
 
-      <Script
-        src={jsAgent}
-        strategy="beforeInteractive"
-        crossOrigin="anonymous"
-      />
+      <Script src={jsAgent} strategy="beforeInteractive" crossOrigin="anonymous" />
     </>
   );
 }
