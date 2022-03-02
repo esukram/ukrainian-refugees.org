@@ -1,18 +1,14 @@
-import { useRouter } from "next/router";
-import { GetStaticProps, NextPage } from "next";
-
+import i18n from "i18next";
 import Link from "next/link";
-
-import type LocaleProps from "../locales";
-
+import { useRouter } from "next/router";
 import styles from "../styles/Header.module.css";
 
-const Header: NextPage<LocaleProps> = (props) => {
+const Header = () => {
   const { locales = [], locale: activeLocale, ...router } = useRouter();
 
   return (
     <header className={styles.header}>
-      <h1>{props.locale.head.title}</h1>
+      <h1>{i18n.t("Header.title")}</h1>
       <ul className={styles.lang_switcher}>
         {locales.map((locale) => {
           const { pathname, query, asPath } = router;
@@ -30,14 +26,6 @@ const Header: NextPage<LocaleProps> = (props) => {
       </ul>
     </header>
   );
-};
-
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      locale: require(`../locales/${locale}.json`),
-    },
-  };
 };
 
 export default Header;

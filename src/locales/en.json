@@ -1,11 +1,11 @@
 {
-  "head": {
+  "Header": {
     "title": "Help for Ukrainian Refugees"
   },
   "Home": {
     "title": "Welcome"
   },
-  "footer": {
+  "Footer": {
     "bugs_start": "Please report bugs as ",
     "bugs-end": "!",
     "ideas_start": "New ideas are welcome, please create a ",
