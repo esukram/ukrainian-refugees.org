@@ -1,32 +1,18 @@
-import { useRouter } from "next/router";
 import type { NextPage } from "next";
 import { GetStaticProps } from "next";
 
 import Head from "next/head";
-import Script from "next/script";
 
 import type LocaleProps from "../locales";
 
 import styles from "../styles/Home.module.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-
-let jsRumAgent = "/js-rum-dev.js";
-if (process.env.APP_ENV === "production") {
-  jsRumAgent = "/js-rum-prod.js";
-}
 
 const Home: NextPage<LocaleProps> = (props) => {
-  const { locales = [], locale: activeLocale, ...router } = useRouter();
-
   return (
     <>
       <Head>
         <title>{props.locale.head.title}</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Header {...props}></Header>
 
       <main className={styles.main}>
         <article>
@@ -71,14 +57,11 @@ const Home: NextPage<LocaleProps> = (props) => {
           </p>
         </article>
       </main>
-
-      <Footer {...props}></Footer>
-      <Script src={jsRumAgent} strategy="beforeInteractive" />
     </>
   );
 };
 
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
+export const getStaticProps: GetStaticProps = ({ locale }) => {
   return {
     props: {
       locale: require(`../locales/${locale}.json`),

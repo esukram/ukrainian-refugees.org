@@ -1,4 +1,8 @@
 {
+  "error": {
+    "404": "Seite nicht gefunden!",
+    "500": "Serverfehler beim Bearbeiten der Anfrage!"
+  },
   "head": {
     "title": "Hilfe für Ukrainische Flüchtlinge"
   },
