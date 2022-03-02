@@ -1,5 +1,7 @@
 {
   "jsxSingleQuote": false,
+  "printWidth": 100,
+  "arrowParens": "avoid",
   "overrides": [
     {
       "files": ["*.md", "**/*.md", "**/*.mdx"],
