@@ -1,0 +1,11 @@
+{
+  "jsxSingleQuote": false,
+  "overrides": [
+    {
+      "files": ["*.md", "**/*.md", "**/*.mdx"],
+      "options": {
+        "proseWrap": "preserve"
+      }
+    }
+  ]
+}

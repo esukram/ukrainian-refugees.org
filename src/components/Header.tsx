@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <h1>{i18n.t("Header.title")}</h1>
+      <h1 className="underline underline-offset-8">{i18n.t("Header.title")}</h1>
       <ul className={styles.lang_switcher}>
         {locales.map((locale) => {
           const { pathname, query, asPath } = router;

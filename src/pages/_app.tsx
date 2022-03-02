@@ -1,16 +1,16 @@
 import i18n from "i18next";
-import type { AppProps } from "next/app";
 import Head from "next/head";
 import Script from "next/script";
 import { Layout } from "../components/Layout";
+
+import type { AppProps } from "next/app";
+
 import "../styles/globals.css";
 
-let jsRumAgent: string;
-if (process.env.NODE_ENV === "production") {
-  jsRumAgent = "/js-rum-prod.js";
-} else {
-  jsRumAgent = "/js-rum-dev.js";
-}
+const jsAgent =
+  process.env.APP_ENV === "production"
+    ? "https://js-cdn.dynatracelabs.com/jstag/14868fa4215/bf92769fcy/f73d490c2124cf37_complete.js"
+    : "https://js-cdn.dynatracelabs.com/jstag/14868fa4215/bf68100yjs/5e1bbf45c5a79b50_complete.js";
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const locale = router.locale ?? router.defaultLocale ?? "en";
@@ -33,7 +33,11 @@ function MyApp({ Component, pageProps, router }: AppProps) {
         <Component {...pageProps} />;
       </Layout>
 
-      <Script src={jsRumAgent} strategy="beforeInteractive" />
+      <Script
+        src={jsAgent}
+        strategy="beforeInteractive"
+        crossOrigin="anonymous"
+      />
     </>
   );
 }

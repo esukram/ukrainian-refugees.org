@@ -1,13 +1,17 @@
 export type LocaleProps = {
   locale: {
+    error: {
+      404: string;
+      500: string;
+    };
     head: {
-      title: String;
+      title: string;
     };
     footer: {
-      bugs_start: String;
-      bugs_end: String;
-      ideas_start: String;
-      ideas_end: String;
+      bugs_start: string;
+      bugs_end: string;
+      ideas_start: string;
+      ideas_end: string;
     };
   };
 };

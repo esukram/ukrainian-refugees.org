@@ -5,6 +5,7 @@ amplify
 build
 dist
 node_modules
+out
 public/js-rum*.js
 src/aws-exports.js
 src/graphql/generated
