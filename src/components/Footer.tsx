@@ -1,40 +1,25 @@
-import { useRouter } from "next/router";
-import { GetStaticProps, NextPage } from "next";
-import type LocaleProps from "../locales";
-
+import i18n from "i18next";
 import styles from "../styles/Footer.module.css";
 
-const Footer: NextPage<LocaleProps> = (props) => {
-  const { locales = [], locale: activeLocale, ...router } = useRouter();
-
-  return (
-    <footer className={styles.footer}>
-      <ul>
-        <li>
-          {props.locale.footer.bugs_start}
-          <a href="https://github.com/esukram/ukrainian-refugees.org/issues">
-            GitHub issue
-          </a>
-          {props.locale.footer.bugs_end}
-        </li>
-        <li>
-          {props.locale.footer.ideas_start}
-          <a href="https://github.com/esukram/ukrainian-refugees.org/discussions">
-            GitHub Discussion
-          </a>
-          {props.locale.footer.ideas_end}
-        </li>
-      </ul>
-    </footer>
-  );
-};
-
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      locale: require(`../locales/${locale}.json`),
-    },
-  };
-};
+const Footer = () => (
+  <footer className={styles.footer}>
+    <ul>
+      <li>
+        {i18n.t("Footer.bugs_start")}
+        <a href="https://github.com/esukram/ukrainian-refugees.org/issues">
+          GitHub issue
+        </a>
+        {i18n.t("Footer.bugs_end")}
+      </li>
+      <li>
+        {i18n.t("Footer.ideas_start")}
+        <a href="https://github.com/esukram/ukrainian-refugees.org/discussions">
+          GitHub Discussion
+        </a>
+        {i18n.t("Footer.ideas_end")}
+      </li>
+    </ul>
+  </footer>
+);
 
 export default Footer;
