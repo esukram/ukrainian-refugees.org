@@ -17,12 +17,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  #__next {
+    @apply h-full bg-gray-100 flex flex-col;
+  }
+  html,
+  body {
+    @apply h-full;
+  }
+
+  .errorText {
+    @apply text-red-500 text-sm;
+  }
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 body {

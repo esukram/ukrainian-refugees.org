@@ -3,13 +3,13 @@ import { NextPage } from "next";
 import Footer from "./Footer";
 import Header from "./Header";
 
-import styles from "../styles/Layout.module.css";
-
 export const Layout: NextPage = ({ children }) => {
   return (
     <>
       <Header />
-      <main className={styles.main}>{children}</main>
+      <main className="bg-gray-100 flex-1 w-full flex flex-col items-center justify-start">
+        {children}
+      </main>
       <Footer />
     </>
   );

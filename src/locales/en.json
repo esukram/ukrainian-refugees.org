@@ -10,5 +10,28 @@
     "bugs-end": "!",
     "ideas_start": "New ideas are welcome, please create a ",
     "ideas_end": " for it."
+  },
+  "Register": {
+    "Refugee": {
+      "register-refugee": "Register as refugee",
+      "register-description": "Register yourself and your companions",
+      "add-person": "+ Add person",
+      "register-cta": "Register",
+
+      "PersonForm": {
+        "first-name": "First name",
+        "last-name": "Last name",
+        "email": "Email",
+        "phone": "Phone",
+        "location": "Location",
+        "remove": "Remove"
+      },
+
+      "RefugeeSchema": {
+        "first-name-required": "First name is required",
+        "last-name-required": "Email is required",
+        "email-required": "Last name is required"
+      }
+    }
   }
 }

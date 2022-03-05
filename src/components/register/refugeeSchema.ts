@@ -1,12 +1,16 @@
 import * as Yup from "yup";
+import i18n from "i18next";
 
 const personSchema = Yup.object().shape({
-  name: Yup.string().required("name required"),
-  age: Yup.number().required("age required").typeError("age must be a number"),
+  firstName: Yup.string().required("Register.Refugee.RefugeeSchema.first-name-required"),
+  lastName: Yup.string().required("Register.Refugee.RefugeeSchema.last-name-required"),
+  email: Yup.string().required("Register.Refugee.RefugeeSchema.email-required"),
+  phone: Yup.string(),
+  location: Yup.string(),
 });
 
 const refugeeSchema = Yup.object().shape({
-  friends: Yup.array().of(personSchema),
+  people: Yup.array().of(personSchema),
 });
 
 export default refugeeSchema;

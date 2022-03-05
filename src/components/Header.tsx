@@ -7,10 +7,10 @@ const Header = () => {
   const { locales = [], locale: activeLocale, ...router } = useRouter();
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} bg-white`}>
       <h1 className="underline underline-offset-8">{i18n.t("Header.title")}</h1>
       <ul className={styles.lang_switcher}>
-        {locales.map((locale) => {
+        {locales.map(locale => {
           const { pathname, query, asPath } = router;
           return (
             <li key={locale}>
