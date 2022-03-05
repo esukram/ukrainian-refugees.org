@@ -10,5 +10,9 @@
     "bugs_end": "!",
     "ideas_start": "Neue Ideen sind willkommen, bitte erstelle ein ",
     "ideas_end": " Ticket dafür."
+  },
+  "Register/refugee": {
+    "register-refugee": "Etwas",
+    "register-description": "Sowas"
   }
 }
