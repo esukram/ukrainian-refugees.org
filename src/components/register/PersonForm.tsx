@@ -42,7 +42,7 @@ export default function PersonForm({ index, onRemove }: TProps) {
         <label className={styles.label} htmlFor="firstName">
           {i18n.t("Register.Refugee.PersonForm.first-name")}
         </label>
-        <Field className={styles.field} id="firstName" name={`people[${index}]firstName`} />
+        <Field className={styles.field} id="firstName" name={`people[${index}].firstName`} />
         <ErrorMessage
           component="a"
           className={styles.errorMsg}

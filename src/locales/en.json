@@ -29,8 +29,32 @@
 
       "RefugeeSchema": {
         "first-name-required": "First name is required",
-        "last-name-required": "Email is required",
-        "email-required": "Last name is required"
+        "last-name-required": "Last name is required",
+        "email-required": "Email name is required",
+        "email-valid": "Must be a valid email address"
+      }
+    },
+    "Provider": {
+      "register-provider": "Register as provider",
+      "register-description": "Register housing and capacity",
+      "register-cta": "Register",
+
+      "ContactForm": {
+        "first-name": "First name",
+        "last-name": "Last name",
+        "email": "Email",
+        "phone": "Phone",
+        "address": "Address",
+        "capacity": "Capacity",
+        "people": "People"
+      },
+
+      "ProviderSchema": {
+        "first-name-required": "First name is required",
+        "last-name-required": "Last name is required",
+        "email-required": "Last name is required",
+        "capacity-required": "At least room for a single person",
+        "email-valid": "Must be a valid email address"
       }
     }
   }
