@@ -3,7 +3,12 @@
     "title": "Help for Ukrainian Refugees"
   },
   "Home": {
-    "title": "Welcome"
+    "title": "Welcome",
+    "nav": {
+      "home": "Home",
+      "refugee": "Refugee",
+      "housing": "Housing"
+    }
   },
   "Footer": {
     "bugs_start": "Please report bugs as ",

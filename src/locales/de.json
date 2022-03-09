@@ -3,7 +3,12 @@
     "title": "Hilfe für Ukrainische Flüchtlinge"
   },
   "Home": {
-    "title": "Herzlich Willkommen"
+    "title": "Herzlich Willkommen",
+    "nav": {
+      "home": "Hauptseite",
+      "refugee": "Flüchtling",
+      "housing": "Unterkunft"
+    }
   },
   "Footer": {
     "bugs_start": "Bitte melde uns Fehler als ",

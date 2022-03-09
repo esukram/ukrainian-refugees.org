@@ -59,11 +59,8 @@ export default function RegisterRefugee() {
         <p>{t("Register.Refugee.register-description")}</p>
       </div>
 
-      <Formik
-        initialValues={initialValues}
-        validationSchema={refugeeSchema}
-        onSubmit={onSubmit}
-        render={({ values, errors, setFieldTouched }) => (
+      <Formik initialValues={initialValues} validationSchema={refugeeSchema} onSubmit={onSubmit}>
+        {({ values }) => (
           <Form className="max-w-lg w-full mx-auto">
             <FieldArray
               name="people"
@@ -100,7 +97,7 @@ export default function RegisterRefugee() {
             </div>
           </Form>
         )}
-      />
+      </Formik>
     </div>
   );
 }
