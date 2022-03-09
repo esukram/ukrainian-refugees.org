@@ -1,10 +1,9 @@
+import { FieldArray, Form, Formik } from "formik";
 import React from "react";
-import { Formik, Form, FieldArray } from "formik";
+import { useTranslation } from "react-i18next";
 import { v4 as uuid } from "uuid";
-import i18n from "i18next";
-
 import PersonForm, { TPerson } from "../../components/register/PersonForm";
-import refugeeSchema from "../../components/register/refugeeSchema";
+import { useFormikSchemas } from "../../components/register/useFormikSchemas";
 
 const styles = {
   buttonSubmit:
@@ -18,6 +17,9 @@ type TForm = {
 };
 
 export default function RegisterRefugee() {
+  const { t } = useTranslation();
+  const { refugeeSchema } = useFormikSchemas();
+
   const [isLoading, setIsLoading] = React.useState(false);
 
   const addPerson = () => {
@@ -53,8 +55,8 @@ export default function RegisterRefugee() {
   return (
     <div className="container flex flex-col px-4 mt-6 sm:px-8 md:px-0">
       <div className="max-w-lg w-full mx-auto flex flex-col">
-        <h1>{i18n.t("Register.Refugee.register-refugee")}</h1>
-        <p>{i18n.t("Register.Refugee.register-description")}</p>
+        <h1>{t("Register.Refugee.register-refugee")}</h1>
+        <p>{t("Register.Refugee.register-description")}</p>
       </div>
 
       <Formik
@@ -84,7 +86,7 @@ export default function RegisterRefugee() {
                         arrayHelpers.push(addPerson());
                       }}
                     >
-                      {i18n.t("Register.Refugee.add-person")}
+                      {t("Register.Refugee.add-person")}
                     </button>
                   </div>
                 </div>
@@ -93,7 +95,7 @@ export default function RegisterRefugee() {
 
             <div className="flex align-center justify-center">
               <button type="submit" className={styles.buttonSubmit}>
-                {i18n.t("Register.Refugee.register-cta")}
+                {t("Register.Refugee.register-cta")}
               </button>
             </div>
           </Form>

@@ -1,8 +1,8 @@
 import { Form, Formik } from "formik";
-import i18n from "i18next";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import ProviderContactForm, { TContact } from "../../components/register/ProviderContactForm";
-import providerSchema from "../../components/register/providerSchema";
+import { useFormikSchemas } from "../../components/register/useFormikSchemas";
 
 const styles = {
   buttonSubmit:
@@ -21,6 +21,9 @@ const DEFAULTS: TContact = {
 };
 
 export default function RegisterHousing() {
+  const { t } = useTranslation();
+  const { providerSchema } = useFormikSchemas();
+
   const [isLoading, setIsLoading] = React.useState(false);
 
   const onSubmit = React.useCallback(async (value: TContact) => {
@@ -44,8 +47,8 @@ export default function RegisterHousing() {
   return (
     <div className="container flex flex-col px-4 mt-6 sm:px-8 md:px-0">
       <div className="max-w-lg w-full mx-auto flex flex-col">
-        <h1>{i18n.t("Register.Provider.register-provider")}</h1>
-        <p>{i18n.t("Register.Provider.register-description")}</p>
+        <h1>{t("Register.Provider.register-provider")}</h1>
+        <p>{t("Register.Provider.register-description")}</p>
       </div>
 
       <Formik initialValues={DEFAULTS} validationSchema={providerSchema} onSubmit={onSubmit}>
@@ -57,7 +60,7 @@ export default function RegisterHousing() {
 
             <div className="flex align-center justify-center">
               <button type="submit" className={styles.buttonSubmit}>
-                {i18n.t("Register.Provider.register-cta")}
+                {t("Register.Provider.register-cta")}
               </button>
             </div>
           </>

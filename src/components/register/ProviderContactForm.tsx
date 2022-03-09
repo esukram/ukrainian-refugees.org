@@ -1,6 +1,6 @@
 import { ErrorMessage, Field } from "formik";
-import i18n from "i18next";
 import { FC } from "react";
+import { useTranslation } from "react-i18next";
 
 const styles = {
   group: "grid",
@@ -27,80 +27,81 @@ type Props = {
 };
 
 const ProviderContactForm: FC<Props> = () => {
+  const { t, i18n } = useTranslation();
   return (
     <div className="w-full mt-5 bg-white rounded-lg shadow p-3 sm:p-5">
       <div className={styles.group}>
         <label className={styles.label} htmlFor="firstName">
-          {i18n.t("Register.Provider.ContactForm.first-name")}
+          {t("Register.Provider.ContactForm.first-name")}
         </label>
         <Field className={styles.field} id="firstName" name={`firstName`} />
         <ErrorMessage
           className={styles.errorMsg}
           name={`firstName`}
-          render={msg => <span className="errorText">{i18n.t(msg)}</span>}
+          render={msg => <span className="errorText">{msg}</span>}
         />
       </div>
 
       <div className={styles.group}>
         <label className={styles.label} htmlFor="lastName">
-          {i18n.t("Register.Provider.ContactForm.last-name")}
+          {t("Register.Provider.ContactForm.last-name")}
         </label>
         <Field className={styles.field} id="lastName" name={"lastName"} />
         <ErrorMessage
           className={styles.errorMsg}
           name={"lastName"}
-          render={msg => <span className="errorText">{i18n.t(msg)}</span>}
+          render={msg => <span className="errorText">{msg}</span>}
         />
       </div>
 
       <div className={styles.group}>
         <label className={styles.label} htmlFor="email">
-          {i18n.t("Register.Provider.ContactForm.email")}
+          {t("Register.Provider.ContactForm.email")}
         </label>
         <Field className={styles.field} id="email" name={"email"} />
         <ErrorMessage
           className={styles.errorMsg}
           name={"email"}
-          render={msg => <span className="errorText">{i18n.t(msg)}</span>}
+          render={msg => <span className="errorText">{msg}</span>}
         />
       </div>
 
       <div className={styles.group}>
         <label className={styles.label} htmlFor="phone">
-          {i18n.t("Register.Provider.ContactForm.phone")}
+          {t("Register.Provider.ContactForm.phone")}
         </label>
         <Field className={styles.field} id="phone" name={"phone"} />
         <ErrorMessage
           className={styles.errorMsg}
           name={"phone"}
-          render={msg => <span className="errorText">{i18n.t(msg)}</span>}
+          render={msg => <span className="errorText">{msg}</span>}
         />
       </div>
 
       <div className={styles.group}>
         <label className={styles.label} htmlFor="address">
-          {i18n.t("Register.Provider.ContactForm.address")}
+          {t("Register.Provider.ContactForm.address")}
         </label>
         <Field className={styles.field} id="address" name={"address"} />
         <ErrorMessage
           className={styles.errorMsg}
           name={"address"}
-          render={msg => <span className="errorText">{i18n.t(msg)}</span>}
+          render={msg => <span className="errorText">{msg}</span>}
         />
       </div>
 
       <div className={styles.group}>
         <label className={styles.label} htmlFor="capacity">
-          {i18n.t("Register.Provider.ContactForm.capacity")}
+          {t("Register.Provider.ContactForm.capacity")}
         </label>
         <div className="flex items-center gap-4">
           <Field className={styles.field} id="capacity" name={"capacity"} />
-          <span className={styles.unit}>{i18n.t("Register.Provider.ContactForm.people")}</span>
+          <span className={styles.unit}>{t("Register.Provider.ContactForm.people")}</span>
         </div>
         <ErrorMessage
           className={styles.errorMsg}
           name={"capacity"}
-          render={msg => <span className="errorText">{i18n.t(msg)}</span>}
+          render={msg => <span className="errorText">{msg}</span>}
         />
       </div>
     </div>

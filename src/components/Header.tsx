@@ -1,17 +1,18 @@
-import i18n from "i18next";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useTranslation } from "react-i18next";
 import styles from "../styles/Header.module.css";
 
 const Header = () => {
+  const { t } = useTranslation();
   const { locales = [], locale: activeLocale, ...router } = useRouter();
+  const { pathname, query, asPath } = router;
 
   return (
     <header className={`${styles.header} bg-white`}>
-      <h1 className="underline underline-offset-8">{i18n.t("Header.title")}</h1>
+      <h1 className="underline underline-offset-8">{t("Header.title")}</h1>
       <ul className={styles.lang_switcher}>
         {locales.map(locale => {
-          const { pathname, query, asPath } = router;
           return (
             <li key={locale}>
               {locale === activeLocale && <span>{locale}</span>}

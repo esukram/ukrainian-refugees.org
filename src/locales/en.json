@@ -7,7 +7,7 @@
   },
   "Footer": {
     "bugs_start": "Please report bugs as ",
-    "bugs-end": "!",
+    "bugs_end": "!",
     "ideas_start": "New ideas are welcome, please create a ",
     "ideas_end": " for it."
   },
@@ -30,7 +30,7 @@
       "RefugeeSchema": {
         "first-name-required": "First name is required",
         "last-name-required": "Last name is required",
-        "email-required": "Email name is required",
+        "email-required": "Email is required",
         "email-valid": "Must be a valid email address"
       }
     },
@@ -52,7 +52,7 @@
       "ProviderSchema": {
         "first-name-required": "First name is required",
         "last-name-required": "Last name is required",
-        "email-required": "Last name is required",
+        "email-required": "Email is required",
         "capacity-required": "At least room for a single person",
         "email-valid": "Must be a valid email address"
       }

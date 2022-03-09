@@ -1,5 +1,5 @@
 import { Field, ErrorMessage } from "formik";
-import i18n from "i18next";
+import { useTranslation } from "react-i18next";
 
 const styles = {
   group: "",
@@ -27,79 +27,81 @@ type TProps = {
 };
 
 export default function PersonForm({ index, onRemove }: TProps) {
+  const { t } = useTranslation();
+
   return (
     <div key={index} className="w-full mt-5 bg-white rounded-lg shadow p-3 sm:p-5">
       <div className="flex-1 overflow-hidden mb-2 flex justify-between">
         <h1 className="inline text-2xl font-semibold leading-none">Person {index + 1}</h1>
         {!index && (
           <button type="button" className={styles.buttonRemove} onClick={onRemove}>
-            {i18n.t("Register.Refugee.PersonForm.remove")}
+            {t("Register.Refugee.PersonForm.remove")}
           </button>
         )}
       </div>
 
       <div className={styles.group}>
         <label className={styles.label} htmlFor="firstName">
-          {i18n.t("Register.Refugee.PersonForm.first-name")}
+          {t("Register.Refugee.PersonForm.first-name")}
         </label>
         <Field className={styles.field} id="firstName" name={`people[${index}].firstName`} />
         <ErrorMessage
           component="a"
           className={styles.errorMsg}
           name={`people.${index}.firstName`}
-          render={msg => <a className="errorText">{i18n.t(msg)}</a>}
+          render={msg => <a className="errorText">{msg}</a>}
         />
       </div>
 
       <div className={styles.group}>
         <label className={styles.label} htmlFor="lastName">
-          {i18n.t("Register.Refugee.PersonForm.last-name")}
+          {t("Register.Refugee.PersonForm.last-name")}
         </label>
         <Field className={styles.field} id="lastName" name={`people[${index}].lastName`} />
         <ErrorMessage
           component="a"
           className={styles.errorMsg}
           name={`people.${index}.lastName`}
-          render={msg => <a className="errorText">{i18n.t(msg)}</a>}
+          render={msg => <a className="errorText">{msg}</a>}
         />
       </div>
 
       <div className={styles.group}>
         <label className={styles.label} htmlFor="email">
-          {i18n.t("Register.Refugee.PersonForm.email")}
+          {t("Register.Refugee.PersonForm.email")}
         </label>
         <Field className={styles.field} id="email" name={`people[${index}].email`} />
         <ErrorMessage
           component="a"
           className={styles.errorMsg}
           name={`people[${index}].email`}
-          render={msg => <a className="errorText">{i18n.t(msg)}</a>}
+          render={msg => <a className="errorText">{msg}</a>}
         />
       </div>
 
       <div className={styles.group}>
         <label className={styles.label} htmlFor="phone">
-          {i18n.t("Register.Refugee.PersonForm.phone")}
+          {t("Register.Refugee.PersonForm.phone")}
         </label>
         <Field className={styles.field} id="phone" name={`people[${index}].phone`} />
         <ErrorMessage
           component="a"
           className={styles.errorMsg}
           name={`people[${index}].phone`}
-          render={msg => <a className="errorText">{i18n.t(msg)}</a>}
+          render={msg => <a className="errorText">{msg}</a>}
         />
       </div>
 
       <div className={styles.group}>
         <label className={styles.label} htmlFor="location">
-          {i18n.t("Register.Refugee.PersonForm.location")}
+          {t("Register.Refugee.PersonForm.location")}
         </label>
         <Field className={styles.field} id="location" name={`people[${index}].location`} />
         <ErrorMessage
           component="a"
           className={styles.errorMsg}
           name={`people[${index}].location`}
-          render={msg => <a className="errorText">{i18n.t(msg)}</a>}
+          render={msg => <a className="errorText">{msg}</a>}
         />
       </div>
     </div>
