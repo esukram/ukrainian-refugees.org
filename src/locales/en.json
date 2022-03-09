@@ -3,12 +3,64 @@
     "title": "Help for Ukrainian Refugees"
   },
   "Home": {
-    "title": "Welcome"
+    "title": "Welcome",
+    "nav": {
+      "home": "Home",
+      "refugee": "Refugee",
+      "housing": "Housing"
+    }
   },
   "Footer": {
     "bugs_start": "Please report bugs as ",
-    "bugs-end": "!",
+    "bugs_end": "!",
     "ideas_start": "New ideas are welcome, please create a ",
     "ideas_end": " for it."
+  },
+  "Register": {
+    "Refugee": {
+      "register-refugee": "Register as refugee",
+      "register-description": "Register yourself and your companions",
+      "add-person": "+ Add person",
+      "register-cta": "Register",
+
+      "PersonForm": {
+        "first-name": "First name",
+        "last-name": "Last name",
+        "email": "Email",
+        "phone": "Phone",
+        "location": "Location",
+        "remove": "Remove"
+      },
+
+      "RefugeeSchema": {
+        "first-name-required": "First name is required",
+        "last-name-required": "Last name is required",
+        "email-required": "Email is required",
+        "email-valid": "Must be a valid email address"
+      }
+    },
+    "Provider": {
+      "register-provider": "Register as provider",
+      "register-description": "Register housing and capacity",
+      "register-cta": "Register",
+
+      "ContactForm": {
+        "first-name": "First name",
+        "last-name": "Last name",
+        "email": "Email",
+        "phone": "Phone",
+        "address": "Address",
+        "capacity": "Capacity",
+        "people": "People"
+      },
+
+      "ProviderSchema": {
+        "first-name-required": "First name is required",
+        "last-name-required": "Last name is required",
+        "email-required": "Email is required",
+        "capacity-required": "At least room for a single person",
+        "email-valid": "Must be a valid email address"
+      }
+    }
   }
 }

@@ -1,10 +1,9 @@
 import i18n from "i18next";
+import type { AppProps } from "next/app";
 import Head from "next/head";
 import Script from "next/script";
+import { initReactI18next, useTranslation } from "react-i18next";
 import { Layout } from "../components/Layout";
-
-import type { AppProps } from "next/app";
-
 import "../styles/globals.css";
 
 const jsAgent =
@@ -14,30 +13,33 @@ const jsAgent =
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   const locale = router.locale ?? router.defaultLocale ?? "en";
+  const { t } = useTranslation();
 
-  i18n.init({
+  i18n.use(initReactI18next).init({
     lng: locale,
     resources: {
       [locale]: { translation: require(`../locales/${locale}.json`) },
+    },
+    interpolation: {
+      escapeValue: false, // not needed for react as it escapes by default
+    },
+    react: {
+      bindI18n: "",
     },
   });
 
   return (
     <>
       <Head>
-        <title>{i18n.t("Header.title")}</title>
+        <title>{t("Header.title")}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Layout>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </Layout>
 
-      <Script
-        src={jsAgent}
-        strategy="beforeInteractive"
-        crossOrigin="anonymous"
-      />
+      <Script src={jsAgent} strategy="beforeInteractive" crossOrigin="anonymous" />
     </>
   );
 }

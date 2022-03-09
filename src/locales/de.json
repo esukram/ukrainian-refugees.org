@@ -3,12 +3,68 @@
     "title": "Hilfe für Ukrainische Flüchtlinge"
   },
   "Home": {
-    "title": "Herzlich Willkommen"
+    "title": "Herzlich Willkommen",
+    "nav": {
+      "home": "Hauptseite",
+      "refugee": "Flüchtling",
+      "housing": "Unterkunft"
+    }
   },
   "Footer": {
     "bugs_start": "Bitte melde uns Fehler als ",
     "bugs_end": "!",
     "ideas_start": "Neue Ideen sind willkommen, bitte erstelle ein ",
     "ideas_end": " Ticket dafür."
+  },
+  "Register/refugee": {
+    "register-refugee": "Etwas",
+    "register-description": "Sowas"
+  },
+  "Register": {
+    "Refugee": {
+      "register-refugee": "Registrierung as Flüchtling",
+      "register-description": "Registriere dich und deine Begleiter",
+      "add-person": "+ Zusätzliche Person",
+      "register-cta": "Registrieren",
+
+      "PersonForm": {
+        "first-name": "Vorname",
+        "last-name": "Nachname",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "location": "Standort",
+        "remove": "Entfernen"
+      },
+
+      "RefugeeSchema": {
+        "first-name-required": "Vorname ist pflicht",
+        "last-name-required": "Nachname ist pflicht",
+        "email-required": "E-Mail ist pflicht",
+        "email-valid": "Muss eine gültige E-Mail Adresse sein"
+      }
+    },
+    "Provider": {
+      "register-provider": "Registrierung als Anbieter",
+      "register-description": "Registriere dich als Anbieter einer Unterkunf",
+      "register-cta": "Registrieren",
+
+      "ContactForm": {
+        "first-name": "Vorname",
+        "last-name": "Nachname",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "address": "Anschrift",
+        "capacity": "Platz für",
+        "people": "Personen"
+      },
+
+      "ProviderSchema": {
+        "first-name-required": "Vorname ist pflicht",
+        "last-name-required": "Nachname ist pflicht",
+        "email-required": "E-Mail ist pflicht",
+        "capacity-required": "Anzahl Personen ist pflicht",
+        "email-valid": "Muss eine gültige E-Mail Adresse sein"
+      }
+    }
   }
 }
